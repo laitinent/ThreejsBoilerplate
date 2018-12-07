@@ -1,0 +1,121 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ThreeBoilerplateGenerator.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="code_includes_start" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">&lt;script src=</Value>
+    </Setting>
+    <Setting Name="code_animate_start" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">
+function animate() {
+ requestAnimationFrame( animate );
+</Value>
+    </Setting>
+    <Setting Name="code_animate_end" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">
+  renderer.render( scene, camera );
+}
+</Value>
+    </Setting>
+    <Setting Name="code_global_vars" Type="System.String" Scope="Application">
+      <Value Profile="(Default)"> var camera, scene, renderer;
+ var mesh;
+</Value>
+    </Setting>
+    <Setting Name="code_resize_func" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">
+function onWindowResize() {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize( window.innerWidth, window.innerHeight );
+}
+</Value>
+    </Setting>
+    <Setting Name="code_resize_listen" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">window.addEventListener( 'resize', onWindowResize, false );</Value>
+    </Setting>
+    <Setting Name="code_renderer" Type="System.String" Scope="Application">
+      <Value Profile="(Default)"> renderer = new THREE.WebGLRenderer( { antialias: true } );
+ renderer.setPixelRatio( window.devicePixelRatio );
+ renderer.setSize( window.innerWidth, window.innerHeight );
+ document.body.appendChild( renderer.domElement );
+</Value>
+    </Setting>
+    <Setting Name="code_html_start" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+ &lt;head&gt;
+  &lt;title&gt;</Value>
+    </Setting>
+    <Setting Name="code_html_end" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">
+  &lt;/script&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</Value>
+    </Setting>
+    <Setting Name="code_camera_scene" Type="System.String" Scope="Application">
+      <Value Profile="(Default)"> camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 1, 1000 );
+ camera.position.z = 400;
+ scene = new THREE.Scene();
+</Value>
+    </Setting>
+    <Setting Name="code_sample_mesh" Type="System.String" Scope="Application">
+      <Value Profile="(Default)"> var geometry = new THREE.BoxBufferGeometry( 200, 200, 200 );
+ var material = new THREE.MeshBasicMaterial( { color: "red"} );
+
+ mesh = new THREE.Mesh( geometry, material );
+ scene.add( mesh );
+</Value>
+    </Setting>
+    <Setting Name="code_sample_mesh_animate" Type="System.String" Scope="Application">
+      <Value Profile="(Default)"> mesh.rotation.x += 0.005;
+ mesh.rotation.y += 0.01;
+</Value>
+    </Setting>
+    <Setting Name="code_call_init_animate" Type="System.String" Scope="Application">
+      <Value Profile="(Default)"> init();
+ animate();
+
+ function init() {
+</Value>
+    </Setting>
+    <Setting Name="code_script_start" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">&lt;script&gt;
+</Value>
+    </Setting>
+    <Setting Name="code_func_end" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">
+}
+</Value>
+    </Setting>
+    <Setting Name="code_html_start2" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">&lt;/title&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"&gt;
+  &lt;style&gt;
+   body {
+	margin: 0px;
+	background-color: #000000;
+	overflow: hidden;
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;</Value>
+    </Setting>
+    <Setting Name="code_includes_start2" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">&gt;&lt;/script&gt;</Value>
+    </Setting>
+    <Setting Name="code_orbit_include" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">&lt;script src="https://threejs.org/examples/js/controls/OrbitControls.js"&gt;&lt;/script&gt;
+</Value>
+    </Setting>
+    <Setting Name="code_orbit_add" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">controls = new THREE.OrbitControls(camera, renderer.domElement);
+</Value>
+    </Setting>
+    <Setting Name="code_orbit_update" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">controls.update();
+</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

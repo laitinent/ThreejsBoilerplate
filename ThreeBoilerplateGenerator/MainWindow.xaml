@@ -1,0 +1,28 @@
+﻿<Window x:Class="ThreeBoilerplateGenerator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ThreeBoilerplateGenerator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ScrollViewer>
+            <TextBlock x:Name="tbCode"><InlineUIContainer>
+                    
+                </InlineUIContainer></TextBlock>
+        </ScrollViewer>
+        <StackPanel Margin="654,50,0,0">
+            <Button Content="Open..." Width="75" Click="Button_Click_1"/>
+        <Button x:Name="btNew" Content="New..." Width="75" Click="Button_Click" Margin="0,10"/>
+            <CheckBox x:Name="cbLocal" Content="Local three.js" Margin="0,10" Checked="cbLocal_Checked" />
+            <GroupBox Header="Controls" Height="100" Width="100">
+                <StackPanel>
+                    <RadioButton x:Name="rbNone" Content="None" Margin="0,5" IsChecked="True" GroupName="TControls" Checked="rbNone_Checked"/>
+                    <RadioButton x:Name="rbOrbit"  GroupName="TControls" Content="Orbit" Margin="0,5" Checked="rbNone_Checked"/>
+                    <RadioButton x:Name="rbFly"  GroupName="TControls" Content="Fly" Margin="0,5" Checked="rbNone_Checked"/>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+    </Grid>
+</Window>
